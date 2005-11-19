@@ -1,18 +1,20 @@
 Summary:	xrx application
 Summary(pl):	Aplikacja xrx
 Name:		xorg-app-xrx
-Version:	0.99.1
+Version:	0.99.2
 Release:	0.1
 License:	MIT
 Group:		X11/Application
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/app/xrx-%{version}.tar.bz2
-# Source0-md5:	83d2c47879b2f4d2b5624d4bb03465ee
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/app/xrx-%{version}.tar.bz2
+# Source0-md5:	9c68169dfc89af3b3d2d3fb30d5c8156
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-lib-xtrans-devel
+BuildRequires:	xorg-proto-xproxymanagementprotocol-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

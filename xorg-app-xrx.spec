@@ -2,16 +2,18 @@ Summary:	xrx application
 Summary(pl):	Aplikacja xrx
 Name:		xorg-app-xrx
 Version:	1.0.1
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		X11/Application
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/app/xrx-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/app/xrx-%{version}.tar.bz2
 # Source0-md5:	5f65e24f8a225e255beb2059e33d6b37
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libXau-devel
 BuildRequires:	xorg-lib-libXaw-devel
+BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-lib-xtrans-devel
 BuildRequires:	xorg-proto-xproxymanagementprotocol-devel
@@ -55,9 +57,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/xrx
 %attr(755,root,root) %{_libdir}/libxrx.so.*.*.*
 %attr(755,root,root) %{_libdir}/libxrx.so
 %attr(755,root,root) %{_libdir}/libxrxnest.so.*.*.*
 %attr(755,root,root) %{_libdir}/libxrxnest.so
-%{_mandir}/man1/*.1x*
+%{_mandir}/man1/libxrx.1x*
+%{_mandir}/man1/xrx.1x*

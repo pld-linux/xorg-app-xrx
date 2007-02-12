@@ -1,5 +1,5 @@
 Summary:	xrx application
-Summary(pl.UTF-8):   Aplikacja xrx
+Summary(pl.UTF-8):	Aplikacja xrx
 Name:		xorg-app-xrx
 Version:	1.0.1
 Release:	1

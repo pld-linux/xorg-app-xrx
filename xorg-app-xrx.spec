@@ -4,7 +4,7 @@ Name:		xorg-app-xrx
 Version:	1.0.1
 Release:	1
 License:	MIT
-Group:		X11/Application
+Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xrx-%{version}.tar.bz2
 # Source0-md5:	5f65e24f8a225e255beb2059e33d6b37
 URL:		http://xorg.freedesktop.org/

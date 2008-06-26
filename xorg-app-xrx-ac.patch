@@ -1,0 +1,11 @@
+--- xrx-1.0.2/configure.ac.orig	2008-06-25 21:25:30.000000000 +0200
++++ xrx-1.0.2/configure.ac	2008-06-26 19:45:51.606380650 +0200
+@@ -60,7 +60,7 @@
+ 	    [PLUGIN_CFLAGS=${FIREFOX_PLUGIN_CFLAGS}], [AC_MSG_RESULT([no])])
+ 
+ 	if test "x$PLUGIN_CFLAGS" = x ; then
+-	    PLUGIN_CFLAGS=-I$(top_srcdir)/plugin/include
++	    PLUGIN_CFLAGS='-I$(top_srcdir)/plugin/include'
+ 	fi
+     fi
+ fi

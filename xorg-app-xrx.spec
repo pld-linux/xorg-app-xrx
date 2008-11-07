@@ -2,7 +2,7 @@ Summary:	X Remote eXecution using WWW browser
 Summary(pl.UTF-8):	X Remote eXecution - zdalne wywoływanie aplikacji przy użyciu przeglądarki WWW
 Name:		xorg-app-xrx
 Version:	1.0.2
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xrx-%{version}.tar.bz2

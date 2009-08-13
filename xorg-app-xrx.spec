@@ -1,13 +1,12 @@
 Summary:	X Remote eXecution using WWW browser
 Summary(pl.UTF-8):	X Remote eXecution - zdalne wywoływanie aplikacji przy użyciu przeglądarki WWW
 Name:		xorg-app-xrx
-Version:	1.0.2
-Release:	3
+Version:	1.0.3
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xrx-%{version}.tar.bz2
-# Source0-md5:	c0928bdc816e89a876405d317005ce29
-Patch0:		%{name}-ac.patch
+# Source0-md5:	c121945afcfc84e99af17158fda68be9
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -45,7 +44,6 @@ z rodziny Mozilli (libxrx) demonstrujące działanie tego protokołu.
 
 %prep
 %setup -q -n xrx-%{version}
-%patch0 -p1
 
 sed -i -e 's#^XAW_CHECK_XPRINT_SUPPORT.*##g' configure.ac
 

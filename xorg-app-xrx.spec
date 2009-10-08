@@ -13,7 +13,6 @@ BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	sed >= 4.0
 BuildRequires:	xorg-lib-libXau-devel
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXext-devel
@@ -47,8 +46,6 @@ z rodziny Mozilli (libxrx) demonstrujące działanie tego protokołu.
 %prep
 %setup -q -n xrx-%{version}
 %patch -p1
-
-sed -i -e 's#^XAW_CHECK_XPRINT_SUPPORT.*##g' configure.ac
 
 %build
 %{__libtoolize}

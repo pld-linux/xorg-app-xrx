@@ -1,0 +1,11 @@
+--- xrx-1.0.3/configure.ac.orig	2009-10-08 17:38:27.692615127 +0200
++++ xrx-1.0.3/configure.ac	2009-10-08 17:47:24.472611775 +0200
+@@ -43,7 +43,7 @@
+ dnl first and if it's not in the default location, that you set the ACLOCAL
+ dnl environment variable to find it, such as:
+ dnl     ACLOCAL="aclocal -I ${PREFIX}/share/aclocal"
+-m4_pattern_forbid(XTRANS_CONNECTION_FLAGS)
++m4_pattern_forbid([^XTRANS_CONNECTION_FLAGS$])
+ 
+ # Transport selection macro from xtrans.m4
+ XTRANS_CONNECTION_FLAGS

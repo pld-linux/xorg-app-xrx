@@ -1,25 +1,26 @@
 Summary:	X Remote eXecution using WWW browser
 Summary(pl.UTF-8):	X Remote eXecution - zdalne wywoływanie aplikacji przy użyciu przeglądarki WWW
 Name:		xorg-app-xrx
-Version:	1.0.3
+Version:	1.0.4
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xrx-%{version}.tar.bz2
-# Source0-md5:	c121945afcfc84e99af17158fda68be9
+# Source0-md5:	c93be22d20658ac5ff60469207dec118
 Patch0:		%{name}-ac.patch
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libICE-devel
 BuildRequires:	xorg-lib-libXau-devel
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-lib-xtrans-devel
 BuildRequires:	xorg-proto-xproxymanagementprotocol-devel
-BuildRequires:	xorg-util-util-macros >= 1.2
+BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -54,6 +55,7 @@ z rodziny Mozilli (libxrx) demonstrujące działanie tego protokołu.
 %{__autoheader}
 %{__automake}
 %configure \
+	PLUGIN_CFLAGS="`pwd`/plugin/include" \
 	--disable-static
 
 %{__make}
@@ -65,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 # not needed for plugins
-rm -f $RPM_BUILD_ROOT%{_libdir}/libxrx*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libxrx*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
